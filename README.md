@@ -1,6 +1,16 @@
 # RAG Evaluation Test
 
-Simple RAG system and evaluation implemented with `LangChain`.
+Simple RAG system and evaluation implemented with `LangChain`. The RAG
+uses a demo PDF of a fictional company's employee handbook. 
+The evaluation pipeline uses other LLMs as graders and evaluates the
+RAG's performance based
+on the following metrics:
+
+- **Correctness**: Is the generated answer correct?
+- **Relevance**: Is the generated answer relevant to the question?
+- **Groundedness**: Is the generated answer based on information
+  that's actually in the document?
+- **Relevance**: Are the retrieved document chunks relevant to the question?
 
 ## Usage
 1. Add API keys to `.env`
