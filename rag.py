@@ -34,8 +34,8 @@ vector_db = Chroma.from_documents(
 )
 
 # configure db to act as a document retriever
-# only pull the top 2 relevant chunks
-retriever = vector_db.as_retriever(search_kwargs={'k' : 2})
+# pull the top 5 relevant chunks
+retriever = vector_db.as_retriever(search_kwargs={'k' : 5})
 
 # Define the hidden prompt structure for the LLM
 template = """
